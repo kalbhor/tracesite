@@ -1,13 +1,14 @@
 package main
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/kalbhor/tracesite/src/cli"
 )
 
 func main() {
-
-	cli.Run(os.Args)
-
+	if err := cli.Run(os.Args); err != nil {
+		fmt.Println(err)
+	}
 }

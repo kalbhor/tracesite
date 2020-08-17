@@ -2,7 +2,6 @@ package cli
 
 import (
 	"errors"
-	"log"
 	"time"
 
 	"github.com/kalbhor/tracesite/src/tracesite"
@@ -17,7 +16,7 @@ const DEFAULT_DEST = "kalbhor.xyz"
 const DEFAULT_MAX_HOPS = 24
 const DEFAULT_START_TTL = 1
 
-func Run(args []string) {
+func Run(args []string) error {
 	app := cli.NewApp()
 	app.Name = "tracesite"
 	app.Compiled = time.Now()
@@ -39,8 +38,5 @@ func Run(args []string) {
 		}
 	}
 
-	err := app.Run(args)
-	if err != nil {
-		log.Fatal(err)
-	}
+	return app.Run(args)
 }

@@ -75,7 +75,11 @@ func Tracesite(options *cli.Context) error {
 	defer syscall.Close(recvSocket)
 	defer syscall.Close(sendSocket)
 
-	fmt.Printf("tracing [%v] - %v with packetSize=%v, maxHops=%v, startHop=%v, timeout=%v\n\n", options.Args().Get(0), destAddr, options.Int("packetsize"), options.Int("maxhops"), options.Int("hop"), options.Int("timeout"))
+	fmt.Printf("tracing [%v] - %v with packetSize=%v, maxHops=%v, startHop=%v, timeout=%v\n\n",
+		options.Args().Get(0), destAddr,
+		options.Int("packetsize"), options.Int("maxhops"),
+		options.Int("hop"), options.Int("timeout"))
+
 	for {
 		start := time.Now()
 
