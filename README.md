@@ -1,5 +1,8 @@
 # tracesite
-Go implementation of the traceroute tool 
+
+*tracesite is a simple Go implementation of the traceroute tool*
+
+#### Check out the [blog post](https://blog.kalbhor.xyz/post/implementing-traceroute-in-go/) on explanation
 
 ## Install : 
 - Download binary from [releases](https://github.com/kalbhor/tracesite/releases)
